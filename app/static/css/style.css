@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('/assets/DelaGothicOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #0a0a0c;
+  color: #f2f2f2;
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---------------- Login ---------------- */
+
+.login-box {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #8a8a8f;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="file"] {
+  background: #131316;
+  border: 1px solid #232327;
+  color: #f2f2f2;
+  padding: 12px 14px;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+  border-color: #4a4a52;
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input[type="file"] {
+  font-size: 11px;
+  padding: 10px 12px;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #131316;
+  border: 1px solid #232327;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 10px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background: #1c1c20;
+}
+
+button {
+  background: #f2f2f2;
+  color: #0a0a0c;
+  border: none;
+  padding: 13px 14px;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+button:hover {
+  background: #cfcfcf;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.error-text {
+  font-size: 11px;
+  color: #ff6b6b;
+  min-height: 14px;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #6f6f76;
+  min-height: 14px;
+}
+
+/* ---------------- Generator ---------------- */
+
+.app {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-tag {
+  font-size: 11px;
+  color: #6f6f76;
+  letter-spacing: 0.05em;
+}
+
+.logout-link {
+  font-size: 11px;
+  color: #6f6f76;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.logout-link:hover {
+  color: #f2f2f2;
+  background: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .field {
+  flex: 1;
+}
+
+.preview-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid #232327;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.preview-placeholder {
+  font-size: 11px;
+  color: #4a4a52;
+  letter-spacing: 0.05em;
+}
+
+/* ---------------- Custom banner section ---------------- */
+
+.banner-section {
+  border: 1px solid #232327;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.banner-section-title {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #8a8a8f;
+}
+
+.banner-section-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.banner-section-row input[type="file"] {
+  flex: 1;
+}
+
+.banner-section-row button {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #f2f2f2;
+  border: 1px solid #3a3a40;
+}
+
+.btn-secondary:hover {
+  background: #17171a;
+}

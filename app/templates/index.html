@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Banner Generator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- LOGIN VIEW -->
+  <div id="login-view" class="login-box">
+    <div class="field" id="username-field">
+      <label for="username-input">Username</label>
+      <input type="text" id="username-input" autocomplete="off" placeholder="Search username">
+      <div id="username-dropdown" class="dropdown-list hidden"></div>
+      <input type="hidden" id="username-value">
+    </div>
+    <div class="field">
+      <label for="password-input">Password</label>
+      <input type="password" id="password-input" autocomplete="off">
+    </div>
+    <div class="error-text" id="login-error"></div>
+    <button id="login-btn">Log In</button>
+  </div>
+
+  <!-- GENERATOR VIEW -->
+  <div id="app-view" class="app hidden">
+    <div class="top-bar">
+      <span class="user-tag" id="user-tag"></span>
+      <button class="logout-link" id="logout-btn">Log out</button>
+    </div>
+
+    <div class="field">
+      <label for="title-input">Title</label>
+      <input type="text" id="title-input" autocomplete="off" placeholder="Event title">
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="start-date">Start Date</label>
+        <input type="date" id="start-date">
+      </div>
+      <div class="field">
+        <label for="end-date">End Date</label>
+        <input type="date" id="end-date">
+      </div>
+    </div>
+
+    <div class="preview-wrap" id="preview-wrap">
+      <span class="preview-placeholder">Preview will appear here</span>
+    </div>
+
+    <button id="download-btn">Download PNG</button>
+    <div class="error-text" id="app-error"></div>
+
+    <div class="banner-section">
+      <span class="banner-section-title">Custom Banner</span>
+      <div class="banner-section-row">
+        <input type="file" id="banner-file-input" accept=".png,.jpg,.jpeg,.webp">
+        <button id="banner-upload-btn">Publish</button>
+      </div>
+      <button class="btn-secondary" id="banner-reset-btn">Reset to default</button>
+      <span class="status-text" id="banner-status"></span>
+    </div>
+  </div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
