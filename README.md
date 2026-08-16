@@ -56,7 +56,7 @@ on first run.
 1. **Clone and enter the repo**
 
    ```bash
-   git clone https://github.com/heykodexy/event-banner-generator.git
+   git clone https://github.com/heykodex/event-banner-generator.git
    cd event-banner-generator
    ```
 
@@ -143,21 +143,6 @@ first request) and to add your `assets/` files on the server too.
 
 Whatever host you use, set `FLASK_ENV=production` and a real `SECRET_KEY` —
 the defaults in `config.py` are for local development only.
-
-## Publishing this repo to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/event-banner-generator.git
-git push -u origin main
-```
-
-`instance/` and `.env` are already in `.gitignore`, so accounts, password
-hashes, uploaded banners, and secrets never get committed. Double check
-`git status` before your first push if you've been testing locally.
 
 ## License
 
